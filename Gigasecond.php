@@ -24,7 +24,7 @@
 
 declare(strict_types=1);
 
-function from(DateTimeImmutable $date): DateTimeImmutable
-{
-    throw new \BadFunctionCallException("Implement the from function");
+function from(DateTimeImmutable $date): DateTimeImmutable {
+        $date = $date->modify("+1000000000 seconds");
+        return $date;
 }
